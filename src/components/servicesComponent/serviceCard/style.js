@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const ServiceCardWrpr = styled.div`
-  height: 20rem;
-  width: 20rem;
+  height: 18rem;
+  width: 18rem;
   border-radius: 1rem;
   border: 1px solid ${({ theme }) => theme.accent};
   padding: 1rem;
