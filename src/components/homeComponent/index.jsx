@@ -50,8 +50,8 @@ function HomeComponent() {
         <Image
           src={MyImage}
           alt="My Image"
-          width={width > 768 ? 500 : 300}
-          height={width > 768 ? 500 : 300}
+          width={width > 1024 ? 450 : 300}
+          height={width > 1024 ? 450 : 300}
           style={{ borderRadius: "50%" }}
         ></Image>
       </ImageComponentWrpr>
