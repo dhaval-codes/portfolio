@@ -13,6 +13,8 @@ import MyImage from "../../assets/MyImage.png";
 import Button from "../button";
 import DownloadIcon from "@/assets/icons/downloadIcon";
 
+const width = window.innerWidth;
+
 function HomeComponent() {
   return (
     <HomeComponentWrpr>
@@ -48,8 +50,8 @@ function HomeComponent() {
         <Image
           src={MyImage}
           alt="My Image"
-          width={350}
-          height={350}
+          width={width > 768 ? 500 : 300}
+          height={width > 768 ? 500 : 300}
           style={{ borderRadius: "50%" }}
         ></Image>
       </ImageComponentWrpr>

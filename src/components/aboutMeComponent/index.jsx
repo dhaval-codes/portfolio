@@ -12,6 +12,8 @@ import MyImageAlso from "../../assets/MyImageAlso.png";
 import Image from "next/image";
 import Carrousel from "../carrousel";
 
+const width = window.innerWidth;
+
 const CarrouselData = [
   {
     label: "Web Development",
@@ -58,8 +60,8 @@ function AboutMeComponent() {
         <Image
           alt="My Image"
           src={MyImageAlso}
-          height={350}
-          width={350}
+          width={width > 768 ? 500 : 300}
+          height={width > 768 ? 500 : 300}
           style={{ borderRadius: "50%" }}
         />
       </ImageComponentWrpr>

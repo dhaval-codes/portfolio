@@ -19,6 +19,7 @@ export const HomeComponentWrpr = styled.div`
   @media (min-width: 300px) and (max-width: 768px) {
     padding: 0rem 2rem;
     flex-direction: column-reverse;
+    height: 100%;
   }
 `;
 
