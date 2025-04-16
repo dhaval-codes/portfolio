@@ -33,9 +33,9 @@ const ExperienceData = [
   },
 ];
 
-function ExperienceComponent() {
+function ExperienceComponent({ ref }) {
   return (
-    <ExperienceComponentWrpr>
+    <ExperienceComponentWrpr ref={ref}>
       <SubHeading>EXPERIENCE</SubHeading>
       <Heading>What sets me apart from rest of the SWE / SDE / MTS?</Heading>
       <ExperienceCardWrpr>

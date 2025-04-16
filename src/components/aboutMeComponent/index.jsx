@@ -53,9 +53,9 @@ const CarrouselData = [
   },
 ];
 
-function AboutMeComponent() {
+function AboutMeComponent({ ref }) {
   return (
-    <AboutMeWrpr>
+    <AboutMeWrpr ref={ref}>
       <ImageComponentWrpr>
         <Image
           alt="My Image"

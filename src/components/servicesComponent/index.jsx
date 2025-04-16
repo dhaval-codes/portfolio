@@ -33,9 +33,9 @@ const ServicesData = [
   },
 ];
 
-function ServicesComponent() {
+function ServicesComponent({ ref }) {
   return (
-    <ServicesWrpr>
+    <ServicesWrpr ref={ref}>
       <SubHeading>SERVICES</SubHeading>
       <Heading>
         Exploring My <span> Software Skills</span>

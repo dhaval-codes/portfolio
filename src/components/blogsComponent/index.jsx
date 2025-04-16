@@ -1,9 +1,9 @@
 import React from "react";
 import { BlogsComponentWrpr, Heading, SubHeading } from "./style";
 
-function BlogsComponent() {
+function BlogsComponent({ ref }) {
   return (
-    <BlogsComponentWrpr>
+    <BlogsComponentWrpr ref={ref}>
       <SubHeading>BLOGS</SubHeading>
       <Heading>
         Sometimes I Just Write Blogs

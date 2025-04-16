@@ -15,9 +15,9 @@ import DownloadIcon from "@/assets/icons/downloadIcon";
 
 const width = window.innerWidth;
 
-function HomeComponent() {
+function HomeComponent({ ref }) {
   return (
-    <HomeComponentWrpr>
+    <HomeComponentWrpr ref={ref}>
       <TextComponentWrpr>
         <SubHeading>Welcome to my Portfolio</SubHeading>
         <Heading>

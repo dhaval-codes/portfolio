@@ -13,6 +13,24 @@ import BlogsComponent from "@/components/blogsComponent";
 import ContactMeComponent from "@/components/contactMeComponent";
 
 function Home() {
+  const homeRef = useRef(null);
+  const aboutMeRef = useRef(null);
+  const experienceRef = useRef(null);
+  const servicesRef = useRef(null);
+  const projectsRef = useRef(null);
+  const blogRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const sectionRefs = [
+    homeRef,
+    aboutMeRef,
+    experienceRef,
+    servicesRef,
+    projectsRef,
+    blogRef,
+    contactRef,
+  ];
+
   // variables
   const [menuOptions, setMenuOptions] = useState([
     { label: "Home", selected: true },
@@ -30,6 +48,9 @@ function Home() {
       selected: i === index,
     }));
     setMenuOptions(newMenuOptions);
+
+    // Smooth scroll to the clicked section
+    sectionRefs[index]?.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -38,12 +59,13 @@ function Home() {
         menuOptions={menuOptions}
         handleMenuOptionClick={handleMenuOptionClick}
       />
-      <HomeComponent />
-      <AboutMeComponent />
-      <ExperienceComponent />
-      <ServicesComponent />
-      <ProjectComponet />
-      <BlogsComponent />
+      <HomeComponent ref={homeRef} />
+      <AboutMeComponent ref={aboutMeRef} />
+      <ExperienceComponent ref={experienceRef} />
+      <ServicesComponent ref={servicesRef} />
+      <ProjectComponet ref={projectsRef} />
+      <BlogsComponent ref={blogRef} />
+
       <ContactMeComponent />
     </PageWrpr>
   );

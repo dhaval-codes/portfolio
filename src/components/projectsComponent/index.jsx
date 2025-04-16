@@ -34,9 +34,9 @@ const ProjectData = [
   },
 ];
 
-function ProjectComponet() {
+function ProjectComponet({ ref }) {
   return (
-    <ProjectComponentWrpr>
+    <ProjectComponentWrpr ref={ref}>
       <SubHeading>PROJECTS</SubHeading>
       <Heading>
         Presenting My <span>Projects Portfolio</span> & <br />
