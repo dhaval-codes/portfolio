@@ -10,6 +10,9 @@ export const BlogsComponentWrpr = styled.div`
   height: 30rem;
   padding: 0rem 10rem;
   gap: 2rem;
+  @media (min-width: 300px) and (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 export const SubHeading = styled.p`
@@ -23,4 +26,13 @@ export const Heading = styled.h1`
   font-size: 2.25rem;
   color: ${({ theme }) => theme.backgroundPrimary};
   text-align: center;
+  @media (min-width: 1440px) and (max-width: 2560px) {
+    font-size: 2rem;
+  }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    font-size: 1.5rem;
+  }
+  @media (min-width: 300px) and (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;

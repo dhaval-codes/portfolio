@@ -23,4 +23,18 @@ export const ButtonText = styled.span`
   font-weight: 600;
   color: ${({ theme, type }) =>
     type === "secondary" ? theme.accent : theme.backgroundPrimary};
+  text-align: center;
+
+  @media (min-width: 1440px) and (max-width: 2560px) {
+    font-size: 0.75rem;
+  }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    font-size: 0.7rem;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 0.8125rem;
+  }
+  @media (min-width: 300px) and (max-width: 768px) {
+    font-size: 0.75rem;
+  }
 `;

@@ -14,6 +14,16 @@ export const ProjectCardWrpr = styled.div`
   overflow: hidden;
   position: relative; /* 🔥 This is the missing piece */
 
+  @media (min-width: 1440px) and (max-width: 2560px) {
+    width: 16rem;
+  }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    width: 13rem;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 15rem;
+  }
+
   &:hover {
     background-size: 190%;
   }

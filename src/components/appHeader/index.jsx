@@ -2,31 +2,15 @@
 import React, { useState } from "react";
 import { AppHeaderWrpr, HeaderLogoWrpr, HeaderNavWrpr, NavItem } from "./style";
 import Button from "../button";
+import Image from "next/image";
+import Logo from "../../assets/Logo.png";
 
-function AppHeader() {
-  // variables
-  const [menuOptions, setMenuOptions] = useState([
-    { label: "Home", selected: true },
-    { label: "About Me", selected: false },
-    { label: "Experience", selected: false },
-    { label: "Services", selected: false },
-    { label: "Projects", selected: false },
-    { label: "Blog", selected: false },
-  ]);
-
-  // functions
-  const handleMenuOptionClick = (index) => {
-    const newMenuOptions = menuOptions.map((option, i) => {
-      if (i === index) {
-        return { ...option, selected: true };
-      }
-      return { ...option, selected: false };
-    });
-    ~setMenuOptions(newMenuOptions);
-  };
+function AppHeader({ menuOptions, handleMenuOptionClick }) {
   return (
     <AppHeaderWrpr>
-      <HeaderLogoWrpr>D</HeaderLogoWrpr>
+      <HeaderLogoWrpr>
+        <Image src={Logo} height={50}></Image>
+      </HeaderLogoWrpr>
       <HeaderNavWrpr>
         {menuOptions.map((option, index) => (
           <NavItem

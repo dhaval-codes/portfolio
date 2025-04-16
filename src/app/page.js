@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { PageWrpr } from "./style";
 
 // importing components
@@ -13,9 +13,31 @@ import BlogsComponent from "@/components/blogsComponent";
 import ContactMeComponent from "@/components/contactMeComponent";
 
 function Home() {
+  // variables
+  const [menuOptions, setMenuOptions] = useState([
+    { label: "Home", selected: true },
+    { label: "About Me", selected: false },
+    { label: "Experience", selected: false },
+    { label: "Services", selected: false },
+    { label: "Projects", selected: false },
+    { label: "Blog", selected: false },
+  ]);
+
+  // handle menu tab click
+  const handleMenuOptionClick = (index) => {
+    const newMenuOptions = menuOptions.map((option, i) => ({
+      ...option,
+      selected: i === index,
+    }));
+    setMenuOptions(newMenuOptions);
+  };
+
   return (
     <PageWrpr>
-      <AppHeader />
+      <AppHeader
+        menuOptions={menuOptions}
+        handleMenuOptionClick={handleMenuOptionClick}
+      />
       <HomeComponent />
       <AboutMeComponent />
       <ExperienceComponent />

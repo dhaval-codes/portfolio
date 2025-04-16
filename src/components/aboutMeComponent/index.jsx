@@ -8,7 +8,7 @@ import {
   SubHeading,
   TextComponentWrpr,
 } from "./style";
-import MyImageAlso from "../../assets/MyImageAlso.jpg";
+import MyImageAlso from "../../assets/MyImageAlso.png";
 import Image from "next/image";
 import Carrousel from "../carrousel";
 
@@ -58,8 +58,8 @@ function AboutMeComponent() {
         <Image
           alt="My Image"
           src={MyImageAlso}
-          height={400}
-          width={400}
+          height={350}
+          width={350}
           style={{ borderRadius: "50%" }}
         />
       </ImageComponentWrpr>

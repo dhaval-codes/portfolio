@@ -9,7 +9,7 @@ import {
   TextComponentWrpr,
 } from "./style";
 import Image from "next/image";
-import MyImage from "../../assets/MyImage.jpg";
+import MyImage from "../../assets/MyImage.png";
 import Button from "../button";
 import DownloadIcon from "@/assets/icons/downloadIcon";
 
@@ -48,8 +48,8 @@ function HomeComponent() {
         <Image
           src={MyImage}
           alt="My Image"
-          width={400}
-          height={400}
+          width={350}
+          height={350}
           style={{ borderRadius: "50%" }}
         ></Image>
       </ImageComponentWrpr>

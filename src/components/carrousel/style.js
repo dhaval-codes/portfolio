@@ -15,6 +15,10 @@ export const CarrouselButtonWrpr = styled.div`
   width: 100%;
   display: flex;
   gap: 1rem;
+  @media (min-width: 300px) and (max-width: 768px) {
+    gap: 0.2rem;
+    flex-wrap: wrap;
+  }
 `;
 
 export const CarrouselContentWrpr = styled.div`

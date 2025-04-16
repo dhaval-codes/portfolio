@@ -37,7 +37,7 @@ function ExperienceComponent() {
   return (
     <ExperienceComponentWrpr>
       <SubHeading>EXPERIENCE</SubHeading>
-      <Heading>What sets me apart from rest of the SWE/MLE/MTS?</Heading>
+      <Heading>What sets me apart from rest of the SWE / SDE / MTS?</Heading>
       <ExperienceCardWrpr>
         {ExperienceData.map((data, index) => (
           <ExprienceCard key={index}>
