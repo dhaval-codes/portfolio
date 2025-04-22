@@ -45,7 +45,7 @@ function HomeComponent({ ref }) {
             RightIcon={DownloadIcon}
             onClick={() =>
               window.open(
-                "https://drive.google.com/uc?export=download&id=10yGHQImk-_XLVgXTcVYMVxb5glOtpj6r"
+                "https://drive.google.com/uc?export=download&id=1rCkLoRuuOs6j3WDY5DHeDzo9zI1xfhIN"
               )
             }
           />
