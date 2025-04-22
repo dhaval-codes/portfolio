@@ -13,8 +13,6 @@ import MyImageAlso from "../../assets/MyImageAlso.png";
 import Image from "next/image";
 import Carrousel from "../carrousel";
 
-const width = window.innerWidth;
-
 const CarrouselData = [
   {
     label: "Web Development",
@@ -55,6 +53,11 @@ const CarrouselData = [
 ];
 
 function AboutMeComponent({ ref }) {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
   return (
     <AboutMeWrpr ref={ref}>
       <ImageComponentWrpr>

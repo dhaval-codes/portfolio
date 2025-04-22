@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   ButtonsContainer,
   Description,
@@ -14,9 +14,13 @@ import MyImage from "../../assets/MyImage.png";
 import Button from "../button";
 import DownloadIcon from "@/assets/icons/downloadIcon";
 
-const width = window.innerWidth;
-
 function HomeComponent({ ref }) {
+  const [width, setWidth] = useState(0);
+
+  useEffect(() => {
+    setWidth(window.innerWidth);
+  }, []);
+
   return (
     <HomeComponentWrpr ref={ref}>
       <TextComponentWrpr>
